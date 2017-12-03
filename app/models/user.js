@@ -5,22 +5,25 @@ const user = new Schema({
   name: {
     type: String,
   },
-  email: {
+  cpf: {
+    type: String,
+  },
+  address: {
+    type: String,
+  },
+  birthDate: {
     type: String,
     unique: true
   },
-  password: {
+  startDate: {
     type: String,
   },
-  type: {
+  height: {
     type: String,
   },
-  biography: {
+  target: {
     type: String,
   },
-  photo: {
-    type: String,
-  }
 });
 
 module.exports = mongoose.model('User', user);
