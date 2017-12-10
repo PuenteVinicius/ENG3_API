@@ -16,7 +16,7 @@ const UserController = {
     user.findById(_id).exec()
       .then(
         function(user) {
-          if (!user) throw new Error("Usuária não encontrada!");
+          if (!user) throw new Error("Usuário não encontrada!");
           res.json(user)
         },
         function(erro) {
@@ -26,7 +26,7 @@ const UserController = {
       );
   },
   removeUser(req, res) {
-    var _id = req.params.id;
+    var _id = req.body.id;
     user.remove({
         "_id": _id
       }).exec()
@@ -43,7 +43,6 @@ const UserController = {
     /*Update*/
     var _id = req.body._id;
     if (_id) {
-      console.log("tenho id");
       user.findByIdAndUpdate(_id, req.body).exec()
         .then(
           function(user) {

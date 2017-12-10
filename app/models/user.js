@@ -7,7 +7,7 @@ const user = new Schema({
   },
   cpf: {
     type: String,
-  },
+  },  
   address: {
     type: String,
   },
