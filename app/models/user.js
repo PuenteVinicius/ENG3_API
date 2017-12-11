@@ -24,6 +24,9 @@ const user = new Schema({
   target: {
     type: String,
   },
+  status: {
+    type:String
+  }
 });
 
 module.exports = mongoose.model('User', user);
